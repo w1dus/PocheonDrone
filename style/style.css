@@ -131,9 +131,9 @@ footer .info_btn{ background-color: transparent; border: none; }
 /* .main .video_section */
 .main .video_section{ background: linear-gradient(180deg, #906BA3 0%, rgba(144, 107, 163, 0.00) 100%), #278FB3; padding: 74px 0; padding: 100px 0; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
 .main .video_section .inner{ display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.main .video_section .t1{ position: relative; padding-bottom: 10px; text-align: center; color: #EBE168; font-family: 'Paperlogy'; font-weight: 600; font-size: 46px; }
+.main .video_section .t1{ position: relative; padding-bottom: 10px; text-align: center; color: #EBE168; font-family: 'Paperlogy'; font-weight: 700; font-size: 46px; }
 .main .video_section .t1::after{ content:''; display: inline-block; background-color: #EBE168; width: 100%; height: 5px; position: absolute; left: 0; bottom: 0; }
-
+.main .video_section .video_wrap{ margin-top: 27px; overflow: hidden; border-radius: 10px;  }
 
 
 
