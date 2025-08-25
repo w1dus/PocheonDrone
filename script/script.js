@@ -1,12 +1,52 @@
 
 
 document.addEventListener("DOMContentLoaded", function(e){
+  introAnimation();
   slideMenuToggle();
   mainSlide();
   main_keyword_slide();
   subHeaderColor();
   qnaToggle();
 })
+
+const introAnimation = () => {
+  const introSection = document.querySelector('.intro_section');
+  if(!introSection) return;
+
+  // 스크롤 막기
+  document.body.classList.add("no-scroll");
+
+  window.addEventListener("DOMContentLoaded", () => {
+    // PC or MO 구분 (CSS 미디어쿼리랑 동일 기준)
+    const isMobile = window.matchMedia("(max-width: 650px)").matches;
+
+    const selector = isMobile 
+      ? ".intro_section .mo.intro2, .intro_section .mo.intro3, .intro_section .mo.intro4, .intro_section .mo.intro5"
+      : ".intro_section .pc.intro2, .intro_section .pc.intro3, .intro_section .pc.intro4, .intro_section .pc.intro5";
+
+    const intros = document.querySelectorAll(selector);
+
+    // 순차 애니메이션
+    intros.forEach((el, i) => {
+      setTimeout(() => {
+        el.style.transition = "opacity 1s ease-in-out";
+        el.style.opacity = "1";
+      }, (i + 1) * 700);
+    });
+
+    // 전체 끝난 후 intro_section 제거
+    const totalDuration = (intros.length + 1) * 700 + 1000; 
+    setTimeout(() => {
+      introSection.classList.add("fade-out");
+
+      introSection.addEventListener("transitionend", () => {
+        introSection.style.display = "none";
+        document.body.classList.remove("no-scroll");
+      }, { once: true });
+    }, totalDuration);
+  });
+};
+
 
 const qnaToggle = () => {
   $('.sub.question .qna_list .box.q_box').click(function(){
