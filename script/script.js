@@ -47,7 +47,6 @@ const introAnimation = () => {
   });
 };
 
-
 const qnaToggle = () => {
   $('.sub.question .qna_list .box.q_box').click(function(){
     $(this).closest('.item').toggleClass('show');
@@ -96,12 +95,17 @@ const main_keyword_slide = () => {
   }
 };
 
-
-
-
 const mainSlide = () => {
   var swiper = new Swiper(".main .slide_section .swiper", {
     loop : true, 
+    spaceBetween: 46,
+    centeredSlides: true,
+    breakpoints: {
+      1250: {
+        slidesPerView: 1.2,
+        spaceBetween: 10,
+      },
+    },
     pagination: {
       el: ".main .slide_section .swiper-pagination",
       clickable: true,

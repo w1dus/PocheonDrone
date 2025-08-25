@@ -106,15 +106,20 @@ footer .info_btn{ background-color: transparent; border: none; }
 }
 
 /* .main .slide_section */
-.main .slide_section{ overflow:hidden; position: relative; background: linear-gradient(90deg, rgba(144, 107, 163, 0.00) 0%, #906BA3 100%), #278FB3; box-shadow: 4px 13px 23px 0 rgba(0, 0, 0, 0.15); }
-.main .slide_section .pcBg{ padding: 100px 0; height: calc(100vh - 80px); background-size: auto 100%; background-repeat: no-repeat; background-position: center; }
-.main .slide_section .moBg{ display: none; background-size: auto 100%; background-repeat: no-repeat; background-position: center; }
+.main .slide_section{ padding: 100px 0; display: flex; align-items: center; justify-content: center; min-height: 100vh; overflow:hidden; position: relative; background: linear-gradient(90deg, rgba(144, 107, 163, 0.00) 0%, #906BA3 100%), #278FB3; box-shadow: 4px 13px 23px 0 rgba(0, 0, 0, 0.15); }
+.main .slide_section .pcBg{ border-radius: 20px; box-shadow: 10px 15px 19px 0 rgba(0, 0, 0, 0.25); padding: 100px 0; height: 625px; background-size: cover; background-repeat: no-repeat; background-position: center; }
+.main .slide_section .moBg{ display: none; background-size: cover; background-repeat: no-repeat; background-position: center; }
 .main .slide_section .swiper-pagination{ bottom: 25px; display: flex; align-items: center; gap: 15px; justify-content: center; }
 .main .slide_section .swiper-pagination-bullet{ opacity: 1; background-color: #fff; border-radius: 50%; border: 2px solid #222; width: 26px; height: 26px; box-shadow: 0 3px 0 0 #222; }
 .main .slide_section .swiper-pagination-bullet-active{ background-color: #EBE168; }
-@media screen and (max-width: 650px) { 
+@media screen and (max-width: 1250px) { 
+    .main .slide_section{ min-height: unset; }
+    .main .slide_section .pcBg{ height: 40vw; }
+}
+@media screen and (max-width: 950px) { 
+    .main .slide_section{ min-height: 100vh; padding: 0; }
     .main .slide_section .pcBg{ display: none; }
-    .main .slide_section .moBg{ display: block; height: calc(100vh - 70.34px); }
+    .main .slide_section .moBg{ border-radius: 2vw; box-shadow: 10px 15px 19px 0 rgba(0, 0, 0, 0.25); display: block; height: 126vw; }
     .main .slide_section .swiper-pagination{ bottom: 15px; gap: 10px; }
     .main .slide_section .swiper-pagination-bullet{ width: 15px; height: 15px; }
 }
