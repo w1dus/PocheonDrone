@@ -21,28 +21,15 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+        <!--카운트다운 라이브러리-->
+        <script type="text/javascript" src="./script/jquery.countdown.js"></script>
     </head>
     <body>
-        <!--intro start { -->
-            <section class="intro_section">
-                <img src="./img/intro/pc_1.jpg" alt="" class="pc intro1" /> 
-                <img src="./img/intro/pc_2.jpg" alt="" class="pc intro2 ab" /> 
-                <img src="./img/intro/pc_3.jpg" alt="" class="pc intro3 ab" /> 
-                <img src="./img/intro/pc_4.jpg" alt="" class="pc intro4 ab" /> 
-                <img src="./img/intro/pc_5.jpg" alt="" class="pc intro5 ab" /> 
-
-                <img src="./img/intro/mo_1.jpg" alt="" class="mo intro1" /> 
-                <img src="./img/intro/mo_2.jpg" alt="" class="mo intro2 ab" /> 
-                <img src="./img/intro/mo_3.jpg" alt="" class="mo intro3 ab" /> 
-                <img src="./img/intro/mo_4.jpg" alt="" class="mo intro4 ab" /> 
-                <img src="./img/intro/mo_5.jpg" alt="" class="mo intro5 ab" /> 
-            </section>
-        <!-- } intro end-->
         <!-- 
             현웅님! default.css도 덮어 씌어 주세요!  
         -->
         <!--헤더 시작  {-->
-        <header>
+        <header class="main"> <!--메인에만 main 클래스 넣어주세요.-->
             <div class="inner">
                 <a href="./index.html">
                     <img src="./img/common/logo.png" alt="포천 한탄강" class="logo" />
@@ -74,7 +61,58 @@
         <!-- } 헤더 끝-->
         <main class="main" id="smooth-wrapper">
             <article id="smooth-content">
-                <section class="slide_section sec_top">
+                <section class="main_banner">
+                    <div class="inner">
+                        <div class="">
+                            <div class="box">
+                                <img src="./img/main/main_banner/drone_1.png" alt="드론" class="drone1 drone" />
+                                <img src="./img/main/main_banner/drone_2.png" alt="드론" class="drone2 drone" />
+                                <div class="content-box">
+                                    <div class="t1">드론, Y-NOT ? 상상 그이상 !</div>
+                                    <h2><span class="small">포천 한탄강</span> </h2>
+                                    <h2>세계 드론제전</h2>
+                                    <div class="t2">POCHEON HANTAN RIVER WORLD DRONE FESTIVAL 2025</div>
+                                    <div class="date">2025.10.9-10.12</div>
+                                </div>
+                            </div>
+                            <div class="countdown-div">
+                                <div class="title-box"><div class="title">COUNTDOWN</div></div>
+                                <div class="count-div">
+                                    <div class="box1">
+                                        <div class="day"></div>
+                                    </div>
+                                </div>
+                                <div id="getting-started">
+
+                                    
+                                </div>
+                                  
+                                <script>
+                                    $("#getting-started").countdown("2025/11/12 20:00", function(event) {
+                                    // $("#getting-started").countdown("2020/11/12 20:00", function(event) {
+                                        function wrapDigits(number) {
+                                            return number.split('').map(d => `<span class="time-digit">${d}</span>`).join('');
+                                        }
+                                    
+                                        function timeBlock(number, label) {
+                                            return `<span class="time-block">${wrapDigits(number)}<span class="time-label">${label}</span></span>`;
+                                        }
+                                    
+                                        // 각 블록 + 콜론(:) 삽입
+                                        let html = '';
+                                        html += timeBlock(event.strftime('%D'), 'Days') + '<div class="slash">:</div>';
+                                        html += timeBlock(event.strftime('%H'), 'Hours') + '<div class="slash">:</div>';
+                                        html += timeBlock(event.strftime('%M'), 'Min') + '<div class="slash">:</div>';
+                                        html += timeBlock(event.strftime('%S'), 'Secs');
+                                    
+                                        $(this).html(html);
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- <section class="slide_section sec_top">
                     <div class="inner">
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
@@ -102,7 +140,7 @@
                     <div class="keyword_list reverse">
                         <img src="./img/main/keywrod_slide/keyword.png" alt="드론레이싱, 캠핑페스타, 드론축구 , 세계음식문화축제 ... " class="keywrod" /><img src="./img/main/keywrod_slide/keyword.png" alt="드론레이싱, 캠핑페스타, 드론축구 , 세계음식문화축제 ... " class="keywrod" />
                     </div>
-                </section>
+                </section> -->
                 <section class="video_section">
                     <div class="inner">
                         <div class="t1">포천 한탄강 세계 드론제전 홍보영상</div>
