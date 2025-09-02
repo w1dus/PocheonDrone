@@ -274,3 +274,66 @@ footer .info_btn{ background-color: transparent; border: none; }
     .main .main_banner .countdown-div #getting-started .slash{ padding: 0 4px; height: 38px;  }
     .main .main_banner .countdown-div #getting-started .time-block .time-label{ font-size: 16px; }
 }
+
+
+@charset "utf-8";
+
+
+/* .sub-banner */
+.sub .sub-banner{ padding: 40px 0; background-image: url('../img/sub_sec/background/sub_6_bg.jpg');background-size: cover; background-repeat: no-repeat; background-position: center; }
+.sub .sub-banner .border-box{ font-weight: 700; display: flex; justify-content: space-between; font-family: "Paperlogy"; color: #fff; border: 8px solid #fff; padding: 70px 50px; }
+.sub .sub-banner .border-box .title .t1{ font-weight: 700; font-size: 22px; }
+.sub .sub-banner .border-box .title .event{ margin-top: 13px; text-shadow: 4.785px 7.975px 10.367px rgba(0, 0, 0, 0.25); font-size: 70px; }
+.sub .sub-banner .border-box .title .event .big{ font-size: 1.25em; }
+.sub .sub-banner .border-box .info-div{ justify-content: space-between; text-align: right; display: flex; flex-direction: column; }
+.sub .sub-banner .border-box .info-div .info{ font-size: 22px; }
+.sub .sub-banner .border-box .info-div .info .date{ font-size: 1.5em; }
+.sub .sub-banner .border-box .info-div .map{ font-size: 50px; color: #4691FF; }
+@media screen and (max-width: 1250px) { 
+  .sub .sub-banner .border-box .title .t1{ font-size: 18px; }
+  .sub .sub-banner .border-box .title .event{ font-size: 50px; }
+  .sub .sub-banner .border-box .info-div .info{ font-size: 18px; }
+  .sub .sub-banner .border-box .info-div .map{ font-size: 40px; }
+}
+@media screen and (max-width: 950px) { 
+  .sub .sub-banner .border-box{ padding: 50px 20px; flex-direction: column; gap: 50px; }
+  .sub .sub-banner .border-box .info-div .map{ margin-top: 20px; }
+}
+@media screen and (max-width: 650px) { 
+  .sub .sub-banner{ padding: 13vw 0; }
+  .sub .sub-banner .border-box{ border-width: 1.5vw; gap: 17vw; padding: 10vw 6vw; }
+  .sub .sub-banner .border-box .title .t1{ font-size: 5vw; }
+  .sub .sub-banner .border-box .title .event{ font-size: 8.1vw; }
+  .sub .sub-banner .border-box .info-div .info{ font-size: 4vw; }
+  .sub .sub-banner .border-box .info-div .map{ margin-top: 2vw; font-size: 8vw; }
+}
+
+
+/* .sub-menu-tab */
+.sub .sub-menu-tab{ height: 0; display: flex; align-items: center; justify-content: center;  }
+.sub .sub-menu-tab .menu-list{ box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.15); text-align: center; display: flex; }
+.sub .sub-menu-tab .menu-list > li{ width: 50%; flex-grow: 1; }
+.sub .sub-menu-tab .menu-list .item{ display: block; padding: 20px; background-color: #fff; }
+.sub .sub-menu-tab .menu-list .item.on{ font-weight: 600; background-color: #142042; color: #fff; }
+
+@media screen and (max-width: 950px) { 
+}
+@media screen and (max-width: 650px) { 
+  .sub .sub-menu-tab .menu-list{ font-size: 14px; }
+  .sub .sub-menu-tab .menu-list .item{ padding: 15px 5px; }
+}
+
+.sub h1{ display: inline; color: #222; font-weight: 700; font-size: 32px; padding-bottom: 7px; position: relative; }
+.sub h1::before{ content:''; display: block; width: 100%; height: 4px; background-color: #142042; position: absolute; left: 0; bottom: 0;}
+@media screen and (max-width: 1250px) { 
+  .sub h1{ font-size: 28px; }
+}
+@media screen and (max-width: 650px) { 
+  .sub h1{ font-size: 24px; }
+}
+
+
+/* common-sponsor */
+.common-sponsor { padding-bottom: 17px; }
+.common-sponsor .logo{  display: block; margin: 0 auto; max-width: 100%; }
+
