@@ -56,11 +56,19 @@ p{ word-break: keep-all; }
 
 
 /* hedaer */
-header{ padding: 12px 0; position: fixed; left: 0; top: 0; width: 100%; z-index: 999; background: linear-gradient(90deg, rgba(144, 107, 163, 0.00) 0%, #906BA3 100%), #278FB3; box-shadow: 4px 13px 23px 0 rgba(0, 0, 0, 0.15); }
-header.main{ background: unset;  background-color: #222;  }
-header .inner{ display: flex; align-items: center; justify-content: space-between; }
-header .menu_list{ display: flex; align-items: center; gap: 83px; font-family: 'Paperlogy'; color: #fff; font-size: 18px; font-weight: 600; }
+header{  position: fixed; left: 0; top: 0; width: 100%; z-index: 999; background: linear-gradient(90deg, rgba(144, 107, 163, 0.00) 0%, #906BA3 100%), #278FB3; box-shadow: 4px 13px 23px 0 rgba(0, 0, 0, 0.15); }
+header.main{ background: unset;   }
+/* header .inner{ display: flex; align-items: center; justify-content: space-between; position: relative; } */
+header .menu_list{ display: flex;  gap: 90px; font-family: 'Paperlogy'; color: #fff; font-size: 16px; font-weight: 600;  }
 header .menu_btn{ display: none; }
+
+header .header_1 { padding: 12px 0; background-color: #222; }
+header .header_1 .inner { display: flex; align-items: center; justify-content: space-between; }
+
+header .header_2 { width: 100%; background: palegoldenrod; }
+header .header_2 .menu_div { display: flex; align-items:; justify-content: space-between; }
+/* header .header_2 .menu_div */
+
 
 @media screen and (max-width: 1250px) { 
     header .menu_btn{ display: block; background-color: transparent; border: none; }
