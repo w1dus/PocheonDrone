@@ -59,21 +59,26 @@ p{ word-break: keep-all; }
 header{  position: fixed; left: 0; top: 0; width: 100%; z-index: 999; background: linear-gradient(90deg, rgba(144, 107, 163, 0.00) 0%, #906BA3 100%), #278FB3; box-shadow: 4px 13px 23px 0 rgba(0, 0, 0, 0.15); }
 header.main{ background: unset;   }
 /* header .inner{ display: flex; align-items: center; justify-content: space-between; position: relative; } */
-header .menu_list{ display: flex;  gap: 90px; font-family: 'Paperlogy'; color: #fff; font-size: 16px; font-weight: 600;  }
+header .menu_list{ display: flex; align-items: center;  gap: 90px; font-family: 'Paperlogy'; color: #fff; font-size: 16px; font-weight: 600;  }
 header .menu_btn{ display: none; }
 
-header .header_1 { padding: 12px 0; background-color: #222; }
-header .header_1 .inner { display: flex; align-items: center; justify-content: space-between; }
+header .menu_list a { display: block; height: 100%; }
 
-header .header_2 { width: 100%; background: palegoldenrod; }
+header .header_1 { padding: 12px 0; background-color: #222; }
+header .header_1 .inner { display: flex; justify-content: space-between; }
+
+header .header_2 { display: none; border-top: 1px solid #7a7a7a; padding: 40px 0; width: 100%; background: #222222; }
 header .header_2 .menu_div { display: flex; align-items:; justify-content: space-between; }
-/* header .header_2 .menu_div */
+header .header_2 .menu_div > li > a { width: 156px; display: block; padding: 15px 0; background: #fff; border-radius: 100px; text-align: center; font-size: 18px; font-weight: 700; margin-bottom: 25px; } 
+header .header_2 .menu_div .menu_box { display: flex; align-items: center; flex-direction: column; text-align: center; gap: 15px; }
+header .header_2 .menu_div .menu_box > div { color: #fff; }
 
 
 @media screen and (max-width: 1250px) { 
     header .menu_btn{ display: block; background-color: transparent; border: none; }
     header .menu_btn .icon{ width: 30px; }
     header .menu_list{ display: none; }
+    header .header_2 { display: none; }
 }
 @media screen and (max-width: 650px) { 
     header .logo{ width: 120px; }

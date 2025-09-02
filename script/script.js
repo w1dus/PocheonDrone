@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function(e){
   main_keyword_slide();
   subHeaderColor();
   qnaToggle();
+
+  headerMenu();
 })
 
 const introAnimation = () => {
@@ -128,4 +130,16 @@ const slideMenuToggle = () => {
     $('.slide_menu').removeClass('show');
     $('.menu_close_bg').removeClass('show');
   })
+}
+
+// header
+
+const headerMenu = () => {
+  $("header .menu_list").mouseenter(function(){
+    $(".header_2").stop().slideDown();
+  })
+  $(".header_2").mouseleave(function(){
+    $(this).stop().slideUp();
+  })
+
 }
